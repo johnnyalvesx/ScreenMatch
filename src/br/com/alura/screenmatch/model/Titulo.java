@@ -1,4 +1,6 @@
-public class Filme {
+package br.com.alura.screenmatch.model;
+
+public class Titulo {
     private String nome;
     private int anoDeLancamento;
     private int duracaoEmMinutos;
@@ -57,5 +59,4 @@ public class Filme {
     public int getTotalDeAvaliacoes() {
         return totalDeAvaliacoes;
     }
-
 }
