@@ -9,8 +9,7 @@ import java.util.ArrayList;
 public class Principal {
     public static void main(String[] args) {
 
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("The Lord of the Rings: The Fellowship of the Ring");
+        Filme meuFilme = new Filme("The Lord of the Rings: The Fellowship of the Ring");
         meuFilme.setAnoDeLancamento(2001);
         meuFilme.setDuracaoEmMinutos(178);
         meuFilme.setIncluidoNoPlano(true);
@@ -36,8 +35,7 @@ public class Principal {
 
         System.out.println("========================================================");
 
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("Exemplo de filme: ");
+        Filme outroFilme = new Filme("Exemplo de filme");
         outroFilme.setAnoDeLancamento(2023);
         outroFilme.setDuracaoEmMinutos(142);
 
@@ -58,8 +56,7 @@ public class Principal {
 
         System.out.println("\n");
 
-        Filme filmeNovo = new Filme();
-        filmeNovo.setNome("Dungeons and Dragons");
+        Filme filmeNovo = new Filme("Dungeons and Dragons");
         filmeNovo.setDuracaoEmMinutos(151);
         filmeNovo.setAnoDeLancamento(2023);
         filmeNovo.avalia(9);
@@ -70,10 +67,10 @@ public class Principal {
         listaDeFilmes.add(filmeNovo);
         listaDeFilmes.add(outroFilme);
         listaDeFilmes.add(meuFilme);
-        System.out.println("Tamanho da lista: "+ listaDeFilmes.size());
+        System.out.println("Tamanho da lista: " + listaDeFilmes.size());
         System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome());
         System.out.println(listaDeFilmes);
-
+        System.out.println("ToString do filme: " + listaDeFilmes.get(0).toString());
 
     }
 }
