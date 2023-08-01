@@ -9,8 +9,7 @@ import java.util.ArrayList;
 public class Principal {
     public static void main(String[] args) {
 
-        Filme meuFilme = new Filme("The Lord of the Rings: The Fellowship of the Ring");
-        meuFilme.setAnoDeLancamento(2001);
+        Filme meuFilme = new Filme("The Lord of the Rings: The Fellowship of the Ring", 2001);
         meuFilme.setDuracaoEmMinutos(178);
         meuFilme.setIncluidoNoPlano(true);
 
@@ -23,8 +22,7 @@ public class Principal {
 
         System.out.println("========================================================");
 
-        Serie theLeftovers = new Serie();
-        theLeftovers.setNome("The Leftovers");
+        Serie theLeftovers = new Serie("The Leftovers", 2014);
         theLeftovers.setAnoDeLancamento(2014);
         theLeftovers.exibeFichaTecnica();
         theLeftovers.setTemporadas(3);
@@ -35,8 +33,7 @@ public class Principal {
 
         System.out.println("========================================================");
 
-        Filme outroFilme = new Filme("Exemplo de filme");
-        outroFilme.setAnoDeLancamento(2023);
+        Filme outroFilme = new Filme("Exemplo de filme", 2023);
         outroFilme.setDuracaoEmMinutos(142);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
@@ -56,7 +53,7 @@ public class Principal {
 
         System.out.println("\n");
 
-        Filme filmeNovo = new Filme("Dungeons and Dragons");
+        Filme filmeNovo = new Filme("Dungeons and Dragons", 2023);
         filmeNovo.setDuracaoEmMinutos(151);
         filmeNovo.setAnoDeLancamento(2023);
         filmeNovo.avalia(9);
