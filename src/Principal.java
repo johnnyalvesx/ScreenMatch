@@ -4,6 +4,8 @@ import br.com.alura.screenmatch.model.Filme;
 import br.com.alura.screenmatch.model.Serie;
 import br.com.alura.screenmatch.calculation.CalculadoraDeTempo;
 
+import java.util.ArrayList;
+
 public class Principal {
     public static void main(String[] args) {
 
@@ -12,7 +14,6 @@ public class Principal {
         meuFilme.setAnoDeLancamento(2001);
         meuFilme.setDuracaoEmMinutos(178);
         meuFilme.setIncluidoNoPlano(true);
-        System.out.println("Duração do filme: " + meuFilme.getDuracaoEmMinutos());
 
         meuFilme.exibeFichaTecnica();
         meuFilme.avalia(5);
@@ -21,6 +22,8 @@ public class Principal {
 
         System.out.println("A média de avaliações do filme: " + meuFilme.pegaMedia());
 
+        System.out.println("========================================================");
+
         Serie theLeftovers = new Serie();
         theLeftovers.setNome("The Leftovers");
         theLeftovers.setAnoDeLancamento(2014);
@@ -28,7 +31,10 @@ public class Principal {
         theLeftovers.setTemporadas(3);
         theLeftovers.setEpisodiosPorTemporada(10);
         theLeftovers.setMinutosPorEpisodio(60);
-        System.out.println("Duração da maratona de " + theLeftovers.getNome() + ": " + theLeftovers.getDuracaoEmMinutos());
+        System.out.println("Duração da maratona de " + theLeftovers.getNome() + ": "
+                + theLeftovers.getDuracaoEmMinutos());
+
+        System.out.println("========================================================");
 
         Filme outroFilme = new Filme();
         outroFilme.setNome("Exemplo de filme: ");
@@ -49,6 +55,25 @@ public class Principal {
         episodio.setSerie(theLeftovers);
         episodio.setTotalVisualizacoes(500);
         filtro.filtra(episodio);
+
+        System.out.println("\n");
+
+        Filme filmeNovo = new Filme();
+        filmeNovo.setNome("Dungeons and Dragons");
+        filmeNovo.setDuracaoEmMinutos(151);
+        filmeNovo.setAnoDeLancamento(2023);
+        filmeNovo.avalia(9);
+
+        System.out.println("\n");
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(filmeNovo);
+        listaDeFilmes.add(outroFilme);
+        listaDeFilmes.add(meuFilme);
+        System.out.println("Tamanho da lista: "+ listaDeFilmes.size());
+        System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome());
+        System.out.println(listaDeFilmes);
+
 
     }
 }
